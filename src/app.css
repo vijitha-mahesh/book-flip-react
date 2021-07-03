@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "DeathFont";
+    src: local("DeathFont"),
+     url("./Fonts/Death_Note_Font_by_Karlibell22.ttf") format("truetype");
+    font-weight: bold;
+    }
+    
+body{
+    background-color: rgb(143, 200, 165);
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'DeathFont'; */
+}
+.body{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(223, 223, 223);
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(24, 24, 24, 0.281);
+    padding: 10px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.book{
+    margin: 10px auto 0 ;
+  
+}
+.container{
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.btn{
+    background-color: rgb(25, 144, 71);
+    border: none;
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: cornsilk;
+    margin: 0 20px;
+}
+.page_btn{
+    background-color: rgb(0, 0, 0);
+    border: none;
+    font-size: 12px;
+    border-radius: 8px;
+    padding: 5px 15px;
+    color: rgb(255, 255, 255);
+    margin-top: auto;
+    align-self: center;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.single_page{
+    background-image: linear-gradient(to right, #e9e9e9 , #bebebea6 50%, #cfcfcf 100%);
+    /* background-color: rgb(231, 231, 231); */
+    border-radius: 5px;
+    overflow: hidden;
+}
+.page-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.page-footer{
+    color: rgb(90, 90, 90);
+    font-size: 12px;
+    margin-top: auto;
+}
+.page-text{
+    margin-top: 20px;
+    font-size: 12px;
+    width: 90%;
+    font-size: 13px;
+    /* line-height: 1.3; */
+    /* background-color: #F7F6F4; */
+}
+.front_cover{
+    border-radius: 5px;
+    /* background-image: url("/fp.jpg"); */
+    overflow: hidden;
+}
+.back_cover{
+    border-radius: 5px;
+    overflow: hidden;
+    /* background-color: rgb(66, 223, 149); */
+}
+.page-image{
+    margin-top: 30px;
+    height: 100px;
+    width: 200px;
+}
+.page-image > img{
+    width: 100%;
+}

@@ -1,138 +1,118 @@
-import "./App.scss";
+import React from 'react'
+import HTMLFlipBook from "react-pageflip";
+import './app.css'
+import FrontCover from './FronPage';
+import BackCover from './BackPage';
+import SinglePage from './SinglePage'
+// import FirstPage from './Page-01.jpg'
+const PageOne = window.location.origin + "/Page-01.jpg"
+const PageTwo = window.location.origin + "/Page-02.png"
+const PageThree = window.location.origin + "/Page-03.png"
 
-function App() {
-  return (
-    <div className="App">
-      <div class="cover">
-        <div class="book">
-          <label for="page-1" class="book__page book__page--1">
-            <img
-              src="https://i.pinimg.com/originals/e1/42/4d/e1424d64b5b36667aa15fe86f6424438.png"
-              alt=""
-            />
-          </label>
 
-          <label for="page-2" class="book__page book__page--4">
-            <div class="page__content">
-              <h1 class="page__content-title">I</h1>
-              <div class="page__content-blockquote">
-                <p class="page__content-blockquote-text">
-                  HARI SELDON — . . . born in the 11,988th year of the Galactic
-                  Era; died 12,069. The dates are more commonly given in terms
-                  of the current Foundational Era as -79 to the year 1 F.E. Born
-                  to middle-class parents on Helicon, Arcturus sector (where his
-                  father, in a legend of doubtful authenticity, was a tobacco
-                  grower in the hydroponic plants of the planet), he early
-                  showed amazing ability in mathematics. Anecdotes concerning
-                  his ability are innumerable, and some are contradictory. At
-                  the age of two, he is said to have. . .{" "}
-                </p>
-                <p class="page__content-blockquote-text">
-                  . . . Undoubtedly his greatest contributions were in the field
-                  of psychohistory. Seldon found the field little more than a
-                  set of vague axioms; he left it a profound statistical
-                  science. . . .{" "}
-                </p>
-                <p class="page__content-blockquote-text">
-                  . . . The best existing authority we have for the details of
-                  his life is the biography written by Gaal Dornick who, as a
-                  young man, met Seldon two years before the great
-                  mathematician's death. The story of the meeting . . .
-                </p>
-                <span class="page__content-blockquote-reference">
-                  Encyclopedia Galactica*
-                </span>
-              </div>
-              <div class="page__content-text">
-                <p>
-                  His name was Gaal Dornick and he was just a country boy who
-                  had never seen Trantor before. That is, not in real life. He
-                  had seen it many times on the hyper-video, and occasionally in
-                  tremendous three-dimensional newscasts covering an Imperial
-                  Coronation or the opening of a Galactic Council. Even though
-                  he had lived all his life on the world of Synnax, which
-                  circled a star at the edges of the Blue Drift, he was not cut
-                  off from civilization, you see. At that time, no place in the
-                  Galaxy was.{" "}
-                </p>
 
-                <p>
-                  There were nearly twenty-five million inhabited planets in the
-                  Galaxy then, and not one but owed allegiance to the Empire
-                  whose seat was on Trantor. It was the last half-century in
-                  which that could be said.{" "}
-                </p>
-              </div>
-              <div class="page__number">3</div>
-            </div>
-          </label>
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-          <input type="radio" name="page" id="page-1" />
+    this.state = {
+      page: 0,
+      totalPage: 0,
+    };
+  }
 
-          <input type="radio" name="page" id="page-2" />
-          <label class="book__page book__page--2">
-            <div class="book__page-front">
-              <div class="page__content">
-                <h1 class="page__content-book-title">Foundation</h1>
-                <h2 class="page__content-author">Isaac Asimov</h2>
+  nextButtonClick = () => {
+    this.flipBook.getPageFlip().flipNext();
+  };
 
-                <p class="page__content-credits">
-                  Introduction by
-                  <span>Paul Krugman</span>
-                </p>
+  prevButtonClick = () => {
+    this.flipBook.getPageFlip().flipPrev();
+  };
 
-                <p class="page__content-credits">
-                  Illustrations by
-                  <span>Alex Wells</span>
-                </p>
+  onPage = (e) => {
+    this.setState({
+      page: e.data,
+    });
+  };
 
-                <div class="page__content-copyright">
-                  <p>The Folio Society</p>
-                  <p>London - MMXII</p>
-                </div>
-              </div>
+  componentDidMount() {
+    this.setState({
+      totalPage: this.flipBook.getPageFlip().getPageCount(),
+    });
+  }
 
-              
-            </div>
-            <div class="book__page-back">
-              <div class="page__content">
-                <h1 class="page__content-title">Contents</h1>
-                <table class="page__content-table">
-                  <tr>
-                    <td align="left">Part I</td>
-                    <td align="left">The Psycohistorians</td>
-                    <td align="right">3</td>
-                  </tr>
-                  <tr>
-                    <td align="left">Part II</td>
-                    <td align="left">The Encyclopedists</td>
-                    <td align="right">43</td>
-                  </tr>
-                  <tr>
-                    <td align="left">Part III</td>
-                    <td align="left">The Mayors</td>
-                    <td align="right">87</td>
-                  </tr>
-                  <tr>
-                    <td align="left">Part IV</td>
-                    <td align="left">The Traders</td>
-                    <td align="right">147</td>
-                  </tr>
-                  <tr>
-                    <td align="left">Part V</td>
-                    <td align="left">The Merchant Princes</td>
-                    <td align="right">173</td>
-                  </tr>
-                </table>
+  render() {
+    return (
+      <div className="body">
+        <HTMLFlipBook
+          width={320}
+          height={460}
+          size="fixed"
+          minWidth={315}
+          maxWidth={1000}
+          minHeight={400}
+          maxHeight={1533}
+          maxShadowOpacity={0.5}
+          showCover={true}
+          mobileScrollSupport={true}
+          onFlip={this.onPage}
+          onChangeOrientation={this.onChangeOrientation}
+          onChangeState={this.onChangeState}
+          className="book"
+          ref={(el) => (this.flipBook = el)}
+        >
 
-                <div class="page__number">2</div>
-              </div>
-            </div>
-          </label>
+          <FrontCover></FrontCover>
+
+          {/* Page 01 */}
+          <SinglePage 
+              number={1} 
+              background={PageOne}
+              ></SinglePage>
+
+          {/* Page 02 */}
+          <SinglePage number={2}   background={PageTwo}></SinglePage>
+
+          {/* Page 03 */}
+          <SinglePage number={3} background={PageThree}></SinglePage>
+
+          {/* Page 04 */}
+          
+          <SinglePage number={4}></SinglePage>
+
+          {/* Page 05 */}
+          <SinglePage number={5}></SinglePage>
+
+          {/* Page 06 */}
+          <SinglePage number={6}></SinglePage>
+         
+          {/* Page 07 */}
+          <SinglePage number={7}></SinglePage>
+          
+          {/* Page 08 */}
+          <SinglePage number={8}></SinglePage>
+
+          <BackCover ></BackCover>
+
+        </HTMLFlipBook>
+
+        {/* BUTTONS */}
+        <div className="container">
+            <button type="button" onClick={this.prevButtonClick} className="btn">
+              Previous page
+            </button>
+            <p>
+              <span>{this.state.page}</span> &nbsp;  of &nbsp;
+              <span>{this.state.totalPage}</span>
+            </p>
+            <button type="button" onClick={this.nextButtonClick} className="btn">
+                Next page
+            </button>
         </div>
+
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

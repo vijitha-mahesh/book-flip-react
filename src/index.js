@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './Fonts/Death_Note_Font_by_Karlibell22.ttf';
 
 ReactDOM.render(
   <React.StrictMode>
