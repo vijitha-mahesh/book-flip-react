@@ -8,6 +8,7 @@ import SinglePage from './SinglePage'
 const PageOne = window.location.origin + "/Page-01.jpg"
 const PageTwo = window.location.origin + "/Page-02.png"
 const PageThree = window.location.origin + "/Page-03.png"
+const PageFour = window.location.origin + "/PresaleBlank001.png"
 
 
 
@@ -78,7 +79,7 @@ class App extends React.Component {
 
           {/* Page 04 */}
           
-          <SinglePage number={4}></SinglePage>
+          <SinglePage number={4} background={PageFour} ></SinglePage>
 
           {/* Page 05 */}
           <SinglePage number={5}></SinglePage>
