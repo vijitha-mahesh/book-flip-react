@@ -9,6 +9,9 @@ const PageOne = window.location.origin + "/Page-01.jpg"
 const PageTwo = window.location.origin + "/Page-02.png"
 const PageThree = window.location.origin + "/Page-03.png"
 const PageFour = window.location.origin + "/PresaleBlank001.png"
+const Phone = window.location.origin + "/Phone.png"
+const private_sale = window.location.origin + "/private_sale.png"
+const telegram = window.location.origin + "/telegram.png"
 
 
 
@@ -109,6 +112,16 @@ class App extends React.Component {
             <button type="button" onClick={this.nextButtonClick} className="btn">
                 Next page
             </button>
+        </div>
+        <div className="sales" style={{backgroundImage:`url(${Phone})`, backgroundSize:"cover", backgroundPosition:"center"}}>
+            <a href="https://gleam.io/Ko5Q2/evernote-private-sale" className="sale_link">
+              <img src={private_sale} alt="" />
+              <p>PRIVATE SALE</p>
+            </a>
+            <a href="https://t.me/EverNoteOfficial" className="sale_link">
+              <img src={telegram} alt="" />
+              <p>TELEGRAM</p>
+            </a>
         </div>
 
       </div>

@@ -11,25 +11,24 @@
     }
     
 body{
-    background-color: rgb(95, 95, 95);
+    background-image: url("woodBg.jpg") ;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
+    width: 100%;
     /* font-family: 'DeathFont'; */
 }
 .body{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
-    overflow: hidden;
-    width: 80%;
-    margin: 0 auto;
-    background-image: url("woodBg.jpg") ;
-    background-repeat: no-repeat;
-  background-size: cover;
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    box-shadow: 0 0 5px rgba(24, 24, 24, 0.281);
+     width: 90%; 
+     height: 100%;
+     margin: 0 auto; 
+     /* background-image: url("woodBg.jpg") ; */
+     /* background-color: rgb(223, 223, 223);  */
+     /* box-shadow: 0 0 5px rgba(24, 24, 24, 0.281);  */
+     /* border-radius: 20px;  */
     padding: 10px;
     height: 90vh;
     display: flex;
@@ -115,4 +114,29 @@ body{
 }
 .page-image > img{
     width: 100%;
+}
+
+.sales{
+    height: 80%;
+    width: 400px;
+    /* background-color: black; */
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translate(0,-50%);
+    /* margin-left: 400px; */
+    transform: translate(300px, -250px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sale_link{
+    /* text-align: center; */
+    transform: rotate(-10deg);
+    text-decoration: none;
+    color: black;
+     font-family: 'DeathFont';
+     margin: 20px auto;
 }
