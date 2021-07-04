@@ -11,7 +11,7 @@
     }
     
 body{
-    background-color: rgb(143, 200, 165);
+    background-color: rgb(95, 95, 95);
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     /* font-family: 'DeathFont'; */
@@ -24,7 +24,7 @@ body{
     overflow: hidden;
     width: 80%;
     margin: 0 auto;
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     box-shadow: 0 0 5px rgba(24, 24, 24, 0.281);
     padding: 10px;
@@ -45,7 +45,7 @@ body{
     
 }
 .btn{
-    background-color: rgb(25, 144, 71);
+    background-color: rgb(95, 95, 95);
     border: none;
     border-radius: 30px;
     padding: 5px 10px;
