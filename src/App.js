@@ -46,8 +46,8 @@ class App extends React.Component {
     return (
       <div className="body">
         <HTMLFlipBook
-          width={320}
-          height={460}
+          width={380}
+          height={520}
           size="fixed"
           minWidth={315}
           maxWidth={1000}

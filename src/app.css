@@ -24,7 +24,7 @@ body{
     overflow: hidden;
     width: 80%;
     margin: 0 auto;
-    background-image: url("../src/woodBg.jpg") ;
+    background-image: url("woodBg.jpg") ;
     background-repeat: no-repeat;
   background-size: cover;
     background-color: rgb(255, 255, 255);
