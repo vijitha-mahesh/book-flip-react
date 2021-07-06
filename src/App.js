@@ -5,10 +5,10 @@ import FrontCover from './FronPage';
 import BackCover from './BackPage';
 import SinglePage from './SinglePage'
 // import FirstPage from './Page-01.jpg'
-const PageOne = window.location.origin + "/Page-01.jpg"
+const PageOne = window.location.origin + "/Page-01.jpeg"
 const PageTwo = window.location.origin + "/Page-02.png"
-const PageThree = window.location.origin + "/Page-03.png"
-const PageFour = window.location.origin + "/PresaleBlank001.png"
+const PageThree = window.location.origin + "/Page-03.jpeg"
+const PageFour = window.location.origin + "/Page-04.jpeg"
 const Phone = window.location.origin + "/Phone.png"
 const private_sale = window.location.origin + "/private_sale.png"
 const telegram = window.location.origin + "/telegram.png"
