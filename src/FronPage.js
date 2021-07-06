@@ -1,5 +1,5 @@
 import React from 'react'
-const image = window.location.origin + "/fp.jpeg"
+const image = window.location.origin + "/fp.png"
 
 const PageCover = React.forwardRef((props, ref) => {
     return (
