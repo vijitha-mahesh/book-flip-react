@@ -118,7 +118,7 @@ class App extends React.Component {
               <img src={private_sale} alt="" />
               <p>PRIVATE SALE</p>
             </a>
-            <a href="https://t.me/EverNoteOfficial" className="sale_link">
+            <a href="https://t.me/DogeNoteOfficial" className="sale_link">
               <img src={telegram} alt="" />
               <p>TELEGRAM</p>
             </a>
