@@ -141,3 +141,23 @@ body{
      font-family: 'DeathFont';
      margin: 20px auto;
 }
+
+.sale_link2{
+    /* text-align: center; */
+    transform: rotate(-10deg);
+    text-decoration: none;
+    color: black;
+     font-family: 'DeathFont';
+     margin: 20px auto;
+
+}
+
+.contractId{
+    padding-left: 10vh;
+    transform: rotate(-12deg);
+    text-decoration: none;
+    color: black;
+    font-family: 'DeathFont';
+    margin: 20px auto;
+ 
+}

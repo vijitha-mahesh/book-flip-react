@@ -114,6 +114,10 @@ class App extends React.Component {
             </button>
         </div>
         <div className="sales" style={{backgroundImage:`url(${Phone})`, backgroundSize:"cover", backgroundPosition:"center"}}>
+        <a href="https://bscscan.com/address/0x0d3e59dbe17bc98a8599493f23dd89b37e21f4c5#code" className="contractId">
+              <p>Official Contract:</p>
+              <p>0x0d3e59dbe17bc98a8599493f23dd89b37e21f4c5</p>
+        </a>
             <a href="https://gleam.io/Ko5Q2/evernote-private-sale" className="sale_link">
               <img src={private_sale} alt="" />
               <p>PRIVATE SALE</p>
